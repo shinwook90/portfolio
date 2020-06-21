@@ -203,5 +203,25 @@ p {
   font-size: var(--font-small);
 }
 
+.job_logo {
+  width: 120px;
+  height: 40px;
+}
 .job {
+  display: flex;
+  align-items: center;
+}
+.job_discription {
+  margin: 0 16px;
+  text-align: left;
+}
+.job_name,
+.job_period {
+  color: var(--color-dark-grey);
+}
+.job_name {
+  font-size: var(--font-small);
+}
+.job_period {
+  font-size: var(--font-micro);
 }
