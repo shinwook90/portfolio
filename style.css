@@ -305,8 +305,29 @@ p {
   padding: 8px 48px;
 }
 
-.cat egory_btn.active,
-.category_btn :hover {
+.category_btn.active,
+.category_btn:hover {
   background-color: var(--color-blue);
   color: var(--color-white);
+}
+
+.category_btn.active .category_count,
+.category_btn:hover .category_count {
+  opacity: 1;
+  top: 0;
+}
+
+.category_count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: color var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration);
 }
