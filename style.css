@@ -110,11 +110,16 @@ p {
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
   background-color: var(--color-navy);
+  display: flex;
+  height: 72px;
+
 }
+
 .navbar_menu {
   display: flex;
 }
@@ -148,6 +153,7 @@ p {
   color: var(--color-white);
   display: none;
 }
+
 /* home */
 
 #Home {
@@ -320,6 +326,7 @@ p {
 .work_categories {
   margin: 40px;
 }
+
 .category_btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--font-medium-size-border-radius);
@@ -370,6 +377,7 @@ p {
   margin: 2px;
   background-color: var(--color-dark-white);
 }
+
 .project_img {
   max-width: 100%;
   max-height: 100%;
@@ -423,6 +431,7 @@ p {
 .contact_title {
   margin: 18px 0;
 }
+
 .contact_email {
   margin: 8px;
 }
