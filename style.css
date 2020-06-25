@@ -438,4 +438,20 @@ p {
     text-align: center;
     width: 100%;
   }
+
+  .about_majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
 }
