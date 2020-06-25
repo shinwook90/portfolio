@@ -129,6 +129,14 @@ p {
   background-color: var(--color-dark-blue);
 }
 
+.navbar_toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
 /* home */
 
 #Home {
@@ -388,6 +396,7 @@ p {
   background-color: var(--color-dark-white);
 }
 
+/*Contact*/
 #contact {
   background-color: var(--color-blue2);
 }
@@ -411,4 +420,22 @@ p {
   transform: scale(1.1);
   color: var(--color-yellow);
   transition: all var(--animation-duration) ease-in;
+}
+
+/*For below 768px screen width*/
+@media screen and (max-width: 768px) {
+  .navbar_toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar_menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
 }
