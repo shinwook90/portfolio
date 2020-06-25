@@ -47,7 +47,7 @@ body {
 }
 
 a {
-  text-emphasis: none;
+  text-decoration: none;
   color: var(--color-white);
 }
 
