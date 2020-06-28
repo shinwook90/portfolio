@@ -3,34 +3,43 @@
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-    if (window.scrollY > navbarHeight) {
-        navbar.classList.add("navbar--dark");
-    } else {
-        navbar.classList.remove("navbar--dark");
-    }
+  if (window.scrollY > navbarHeight) {
+    navbar.classList.add("navbar--dark");
+  } else {
+    navbar.classList.remove("navbar--dark");
+  }
 });
 
-const navbarMenu = document.querySelector('.navbar_menu');
-navbarMenu.addEventListener('click', (event) => {
-    const target = event.target;
-    const link = target.dataset.link;
-    if (link == null) {
-        return;
-    }
-    scrollIntoView(link);
-
+const navbarMenu = document.querySelector(".navbar_menu");
+navbarMenu.addEventListener("click", (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  scrollIntoView(link);
 });
 
-// handle click on "contack me " button on home 
-const homeContactBtn = document.querySelector('.home_contact');
-homeContactBtn.addEventListener('click', () => {
-    scrollIntoView('#contact');
+// handle click on "contack me " button on home
+const homeContactBtn = document.querySelector(".home_contact");
+homeContactBtn.addEventListener("click", () => {
+  scrollIntoView("#contact");
 });
 
 function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({
-        behavior: 'smooth'
-    });
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({
+    behavior: "smooth",
+  });
+}
+//make home slawly fade to transparent as the window scrolls down
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  console.log(homeHeight);
+});
 
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
 }
