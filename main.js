@@ -35,20 +35,28 @@ document.addEventListener("scroll", () => {
 });
 
 // show "arrow up " button when scrolling down
-const arrowUp = document.querySelector('.arrow-up');
-document.addEventListener('scroll', () => {
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
   if (window.scrollY > homeHeight / 2) {
-    arrowUp.classList.add('visible');
+    arrowUp.classList.add("visible");
   } else {
-    arrowUp.classList.remove('visible');
+    arrowUp.classList.remove("visible");
   }
 });
 
 // hondle click on the "arrow up" button
-arrowUp.addEventListener('click', () => {
-  scrollIntoView('#Home');
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#Home");
 });
 
+//projects
+const workBtnContainer = document.querySelector(".work_categories");
+const projectContainer = document.querySelector(".work_projects");
+const projects = document.querySelectorAll(".prpject");
+workBtnContainer.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter;
+  console.log(filter);
+});
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
