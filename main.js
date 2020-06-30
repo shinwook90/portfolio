@@ -52,9 +52,9 @@ arrowUp.addEventListener("click", () => {
 //projects
 const workBtnContainer = document.querySelector(".work_categories");
 const projectContainer = document.querySelector(".work_projects");
-const projects = document.querySelectorAll(".prpject");
+const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (e) => {
-  const filter = e.target.dataset.filter;
+  const filter = e.target.dataset.filter || e.target.parentNode.daraset.filter;
   console.log(filter);
 });
 
