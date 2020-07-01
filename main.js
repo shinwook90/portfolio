@@ -54,8 +54,20 @@ const workBtnContainer = document.querySelector(".work_categories");
 const projectContainer = document.querySelector(".work_projects");
 const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.daraset.filter;
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   console.log(filter);
+  if (filter == null) {
+    return;
+  }
+
+  projects.forEach((project) => {
+    console.log(project.dataset.type);
+    if (filter === "*" || filter === project.dataset.type) {
+      project.classList.remove("invisible");
+    } else {
+      project.classList.add("invisible");
+    }
+  });
 });
 
 function scrollIntoView(selector) {
