@@ -10,6 +10,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
+//Hand scrolling when taplling on the navbar menu
 const navbarMenu = document.querySelector(".navbar_menu");
 navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
@@ -17,7 +18,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen //
+const navbarToggleBtn = document.querySelector(".navbar_toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // handle click on "contack me " button on home
@@ -71,7 +79,5 @@ workBtnContainer.addEventListener("click", (e) => {
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({
-    behavior: "smooth",
-  });
+  scrollTo.scrollIntoView({ behavior: "smooth" });
 }
