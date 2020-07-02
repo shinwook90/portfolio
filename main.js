@@ -55,11 +55,10 @@ const projectContainer = document.querySelector(".work_projects");
 const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  console.log(filter);
   if (filter == null) {
     return;
   }
-
+  console.log(filter);
   projects.forEach((project) => {
     console.log(project.dataset.type);
     if (filter === "*" || filter === project.dataset.type) {
