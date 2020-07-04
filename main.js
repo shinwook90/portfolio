@@ -71,7 +71,7 @@ workBtnContainer.addEventListener("click", (e) => {
     console.log(project.dataset.type);
     if (filter === "*" || filter === project.dataset.type) {
       project.classList.remove("invisible");
-    } else {
+    } else 「
       project.classList.add("invisible");
     }
   });
