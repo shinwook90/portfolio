@@ -74,7 +74,7 @@ workBtnContainer.addEventListener("click", (e) => {
     } else {
       project.classList.add("invisible");
     }
-  });
+    
 
 
 function scrollIntoView(selector) {
