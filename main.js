@@ -10,7 +10,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-//Hand scrolling when taplling on the navbar menu
 const navbarMenu = document.querySelector(".navbar_menu");
 navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
@@ -18,14 +17,7 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
-  navbarMenu.classList.remove("open");
   scrollIntoView(link);
-});
-
-// Navbar toggle button for small screen //
-const navbarToggleBtn = document.querySelector(".navbar_toggle-btn");
-navbarToggleBtn.addEventListener("click", () => {
-  navbarMenu.classList.toggle("open");
 });
 
 // handle click on "contack me " button on home
@@ -57,27 +49,9 @@ arrowUp.addEventListener("click", () => {
   scrollIntoView("#Home");
 });
 
-//projects
-const workBtnContainer = document.querySelector(".work_categories");
-const projectContainer = document.querySelector(".work_projects");
-const projects = document.querySelectorAll(".project");
-workBtnContainer.addEventListener("click", (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-  console.log(filter);
-  projects.forEach((project) => {
-    console.log(project.dataset.type);
-    if (filter === "*" || filter === project.dataset.type) {
-      project.classList.remove("invisible");
-    } else {
-      project.classList.add("invisible");
-    }
-    
-
-
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollTo.scrollIntoView({
+    behavior: "smooth",
+  });
 }
